@@ -1,10 +1,17 @@
 __author__ = 'Keske'
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
+import time
 
 GPIO.setmode(GPIO.BCM)
 
 ECHO = 23
 GPIO.setup(ECHO, GPIO.IN)
-
+broj = 0
 while True:
-    print(GPIO.input(ECHO))
+    if GPIO.input(ECHO)==1:
+        broj = broj + 1
+        print broj
+        while GPIO.input(ECHO)==1:
+            time.sleep(0.1)
+            if GPIO.input(ECHO)==0:
+                break
