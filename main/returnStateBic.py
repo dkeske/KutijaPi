@@ -13,5 +13,5 @@ while True:
     
     if tekuci == 0 and prethodni == 1:
         broj = broj + 1
-        print broj
+        print(broj)
     prethodni = tekuci
