@@ -1,6 +1,7 @@
 __author__ = 'Keske'
 import RPi.GPIO as GPIO
 import time
+from postServer import postServer
 
 GPIO.setmode(GPIO.BCM)
 
@@ -11,7 +12,10 @@ prethodni = 0
 while True:
     tekuci = GPIO.input(ECHO)
     
-    if tekuci == 0 and prethodni == 1:
+    if (tekuci == 0 and prethodni == 1):
         broj = broj + 1
         print(broj)
+        if(broj==5):
+            postServer(5, False, 2)
+            broj = 0
     prethodni = tekuci
