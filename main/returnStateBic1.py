@@ -15,11 +15,8 @@ while True:
     if (tekuci == 0 and prethodni == 1):
         broj = broj + 1
         print(broj)
-        if(broj>=5):
-        	try:
-        		postServer(broj, False, 2)
-	            	broj = 0
-        	except Exception, e:
-        		print("Server nije pronadjen")
-            
+        if(broj==5):
+		postServer(broj, False, 2)
+	       	broj = 0
+           
     prethodni = tekuci
