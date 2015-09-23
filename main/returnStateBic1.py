@@ -15,7 +15,7 @@ while True:
     if (tekuci == 0 and prethodni == 1):
         broj = broj + 1
         print(broj)
-        if(broj==5):
+        if(broj==3):
 		postServer(broj, False, 2)
 	       	broj = 0
            
