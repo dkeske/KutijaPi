@@ -18,7 +18,7 @@ while True:
         if(broj>=5):
         	try:
         		postServer(broj, False, 2)
-            	broj = 0
+	            	broj = 0
         	except Exception, e:
         		print("Server nije pronadjen")
             
